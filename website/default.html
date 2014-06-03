@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>உலகத் தமிழ்க் கழகம்/International Tamil Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="product" content="Metro UI CSS Framework">
+    <meta name="description" content="Simple responsive css framework">
+    <meta name="author" content="Sergey S. Pimenov, Ukraine, Kiev">
+
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.min.css" rel="stylesheet">
+    <!--<link href="js/prettify/prettify.css" rel="stylesheet">-->
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery-2.1.1.js"></script>
+    <script src="scripts/jquery-ui-1.10.4.js"></script>
+    <!--<script src="js/jquery/jquery.widget.min.js"></script>
+    <script src="js/jquery/jquery.mousewheel.js"></script>
+    <script src="js/prettify/prettify.js"></script>-->
+
+</head>
+    <body class="metro">
+        <div class="container-fluid">
+            <div class="grid fluid">
+                <div class="row ">
+                    <div class="clearfix visible-md visible-lg">
+                        <div class="span12 bg-ctablue">
+                            <div class="span1">
+                                <img src="/images/tha_logo.gif" alt="" />
+                            </div>                                                                                  
+                            <div class="span8 offset2">
+                                <img src="/images/italogo.jpg" alt="" />
+                            </div>
+                            <div class="span1">
+                                <img src="/images/tha_logo.gif" alt="" />
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <nav class="sidebar light">
+                            <ul>
+                                <li class="active stick bg-blue"><a href="partials/home.html"><i class="icon-home"></i><div>முகப்பு</div><div>Home</div></a></li>
+                                <li class="stick bg-blue"><a href="partials/aboutus.html"><i class=" icon-info"></i><div>எங்களைப் பற்றி</div><div>About Us</div></a></li>
+                                <li class="stick bg-blue"><a href="partials/board.html"><i class="icon-user-3"></i>நிர்வாகம்<br /><i class="icon-user-3"></i>Board</a></li>
+                                <li class="stick bg-blue"><a href="partials/academics.html"><i class="icon-book"></i>கல்வித்திட்டம்<br /><i class="icon-book"></i>Academics</a></li>
+                                <li class="stick bg-blue"><a href="partials/registration.html"><i class="icon-pencil"></i>பதிவு<br /><i class="icon-pencil icon-file"></i>Registration</a></li>
+                                <li class="stick bg-blue"><a href="partials/Branches.html"><i class="icon-location"></i>பள்ளிகள்<br /><i class="icon-location"></i>Schools</a></li>
+                                <li class="stick bg-blue"><a href="partials/contacts.html"><i class="icon-mail"></i>தொடர்பு கொள்ள<br /><i class="icon-mail"></i>Contact Us</a></li>
+                                <li class="stick bg-blue"><a href="partials/resources.html"><i class="icon-link"></i>வெளி இணைப்புகள்<br /><i class="icon-link"></i>External Links</a></li>
+                                <li class="stick bg-blue"><a href="partials/BarathidasanCourses.html"><i class="icon-cabinet"></i>பாரதிதாசன் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Bharathidasan University</a></li>
+                                <li class="stick bg-blue"><a href="partials/berkuniv.html"><i class="icon-cabinet"></i>பெர்க்லி பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Berkeley University</a></li>
+                                <li class="stick bg-blue"><a href="partials/tuv.html"><i class="icon-cabinet"></i>தமிழிணையப் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Tamil Virtual University</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div id="content" class="span8">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            var pageLoader = (function () {
+
+                function transition(page, elem) {
+                    $(elem).closest('ul').find('.active').removeClass('active');
+                    $(elem).closest('li').addClass('active');
+                    return loadPage(page);
+                }
+                function loadPage(page) {
+                    $.get(page, { "_": $.now() }, function (data) {
+                        $('#content').html(data);
+                    });
+                    return false;
+                }
+
+                function getHtml(page) {
+                    var content = '';
+                    $.get(page, function(data) {
+                        content = data;
+                    }).done(function() {
+                        return content;
+                    });  
+                }
+                function loadPageInAWindow(page, icon)
+                {
+                    $.get(page, function (data) {
+                        console.log(data);
+                    }).done(function (data) {
+                        $.Dialog({
+                            overlay: true,
+                            shadow: true,
+                            height:200,
+                            flat: true,
+                            icon: '<img src="' + icon + '">',
+                            title: 'Flat window',
+                            content: '',
+                            onShow: function (_dialog) {
+                                var content = _dialog.children('.content');
+                                content.html(data);
+                            }
+                        });
+                    });
+                   
+                    return false;
+                }
+                return {
+                    Transition: transition,
+                    LoadPage: loadPage,
+                    LoadPageInAWindow: loadPageInAWindow
+                };
+            })();            
+
+            $(function () {
+                if ((document.location.host.indexOf('.dev') > -1) || (document.location.host.indexOf('modernui') > -1)) {
+                    $("<script/>").attr('src', 'js/metro/metro-loader.js').appendTo($('head'));
+                } else {
+                    $("<script/>").attr('src', 'js/metro.min.js').appendTo($('head'));
+                }
+                pageLoader.LoadPage('partials/home.html');
+
+                $(document).on('click', 'li > a, a.inplace', function() {
+                    pageLoader.Transition($(this).attr('href'), this);
+                    return false;
+                });
+
+                //$("li > a").click(function(event) {
+                //    pageLoader.Transition($(this).attr('href'), this);
+                //    return false;
+                //});
+                
+            });
+        </script>
+    </body>
+    
+</html>

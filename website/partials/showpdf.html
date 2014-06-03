@@ -1,0 +1,87 @@
+
+<script language=javascript src="../scripts/gen.js"></script>
+<script language="JavaScript">
+<!--
+
+function gettext() 
+{
+		var srctext="";
+		srctext=window.location.href;
+		var q = "";
+		var index=srctext.indexOf('?')
+		if (index != -1) 
+		{
+			var endindex=srctext.indexOf('&')
+			if (endindex != -1)
+			{
+				q=srctext.substring(index+11,endindex);
+			}
+			else
+			{
+				q=srctext.substring(index+11,srctext.length);
+			}
+			mysearchtext=q;
+	
+		show(q)
+		}
+		
+}
+	
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+// -->
+</script>
+	  <p><span id=img></span></p>
+<p><a class="mouse" href="aboutus.html">Back</a></p>
+	
+	<!-- Content Ends   Here--->
+
+<script language=javascript>
+	var pic;
+	var he;
+	he = "PDF Document";
+	function show(q)
+	{
+		switch(q)
+		{
+		case '0':
+				he = "Introduction by President of CTA";
+				pic = "docs/aboutus/Intro-PresidentofCTA.pdf";
+				break;
+		case '1':
+				he = "Introduction by the Academy";
+				pic = "docs/aboutus/Intro-byAcademy.pdf";
+				break;
+		case '2':
+				he = "A Parent's Note";
+				pic = "docs/aboutus/parents-note.pdf";
+				break;
+		case '3':
+				he = "Description of Skill Levels at different Classes";
+				pic = "docs/aboutus/skilllevelsatdiffclasses.pdf";
+				break;
+		case '4':
+				he = "Description of Exams at different Classes";
+				pic="docs/aboutus/examsatdiffclasses.pdf";
+				break;
+		case '5':
+				he = "Teaching methods captivating students attention"
+				pic = "docs/aboutus/TeachingMethods.pdf"
+				break;
+		case '6':
+				he = "Year End Grading Methods"
+				pic = "docs/aboutus/GradingMethods.pdf"
+				break;
+				}
+		img.innerHTML= '<iframe src="'+ pic +'" width=100% height=600></iframe>';
+		heading.innerHTML= he;
+	}
+	</script>
+<script language="javascript">
+getheader(0);
+</script>

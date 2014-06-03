@@ -1,0 +1,48 @@
+﻿.sidebar {
+
+
+    & > ul {
+
+        li {
+
+
+            a {
+                padding: 10px 35px 10px 45px;
+
+                i {
+                    position: absolute;
+                    top: 14px;
+                    left: 10px;
+                    font-size: 30px;
+                }
+            }
+
+            &.stick {
+                position: relative;
+
+                &:before {
+                    width: 3px;
+                    height: auto;
+                    top: 0px;
+                    bottom: 0px;
+                    z-index: 9999;
+                    left: 0px;
+                    text-indent: -9999px;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    background-color: #2e92cf;
+                }
+
+                &.active {
+                    &:before {
+                        background-color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-ctablue {
+    background-color: #000033;
+}
