@@ -1,4 +1,7 @@
-﻿.sidebar > ul li a {
+﻿.sidebar > ul li {
+  border-left: 1px solid #eeeeee;
+}
+.sidebar > ul li a {
   padding: 10px 35px 10px 45px;
 }
 .sidebar > ul li a i {
@@ -13,17 +16,16 @@
 .sidebar > ul li.stick:before {
   width: 3px;
   height: auto;
-  top: 0px;
-  bottom: 0px;
+  top: 1px;
+  bottom: 1px;
   z-index: 9999;
   left: 0px;
   text-indent: -9999px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
-  background-color: #2e92cf;
 }
 .sidebar > ul li.stick.active:before {
-  background-color: white;
+  background-color: #bf5a15;
 }
 .bg-ctablue {
   background-color: #000033;

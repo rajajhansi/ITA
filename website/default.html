@@ -41,17 +41,17 @@
                     <div class="span4">
                         <nav class="sidebar light">
                             <ul>
-                                <li class="active stick bg-blue"><a href="partials/home.html"><i class="icon-home"></i><div>முகப்பு</div><div>Home</div></a></li>
-                                <li class="stick bg-blue"><a href="partials/aboutus.html"><i class=" icon-info"></i><div>எங்களைப் பற்றி</div><div>About Us</div></a></li>
-                                <li class="stick bg-blue"><a href="partials/board.html"><i class="icon-user-3"></i>நிர்வாகம்<br /><i class="icon-user-3"></i>Board</a></li>
-                                <li class="stick bg-blue"><a href="partials/academics.html"><i class="icon-book"></i>கல்வித்திட்டம்<br /><i class="icon-book"></i>Academics</a></li>
-                                <li class="stick bg-blue"><a href="partials/registration.html"><i class="icon-pencil"></i>பதிவு<br /><i class="icon-pencil icon-file"></i>Registration</a></li>
-                                <li class="stick bg-blue"><a href="partials/Branches.html"><i class="icon-location"></i>பள்ளிகள்<br /><i class="icon-location"></i>Schools</a></li>
-                                <li class="stick bg-blue"><a href="partials/contacts.html"><i class="icon-mail"></i>தொடர்பு கொள்ள<br /><i class="icon-mail"></i>Contact Us</a></li>
-                                <li class="stick bg-blue"><a href="partials/resources.html"><i class="icon-link"></i>வெளி இணைப்புகள்<br /><i class="icon-link"></i>External Links</a></li>
-                                <li class="stick bg-blue"><a href="partials/BarathidasanCourses.html"><i class="icon-cabinet"></i>பாரதிதாசன் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Bharathidasan University</a></li>
-                                <li class="stick bg-blue"><a href="partials/berkuniv.html"><i class="icon-cabinet"></i>பெர்க்லி பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Berkeley University</a></li>
-                                <li class="stick bg-blue"><a href="partials/tuv.html"><i class="icon-cabinet"></i>தமிழிணையப் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Tamil Virtual University</a></li>
+                                <li class="active stick"><a href="partials/home.html"><i class="icon-home"></i><div>முகப்பு</div><div>Home</div></a></li>
+                                <li class=""><a href="partials/aboutus.html"><i class=" icon-info"></i><div>எங்களைப் பற்றி</div><div>About Us</div></a></li>
+                                <li class=""><a href="partials/board.html"><i class="icon-user-3"></i>நிர்வாகம்<br /><i class="icon-user-3"></i>Board</a></li>
+                                <li class=""><a href="partials/academics.html"><i class="icon-book"></i>கல்வித்திட்டம்<br /><i class="icon-book"></i>Academics</a></li>
+                                <li class=""><a href="partials/registration.html"><i class="icon-pencil"></i>பதிவு<br /><i class="icon-pencil icon-file"></i>Registration</a></li>
+                                <li class=""><a href="partials/Branches.html"><i class="icon-location"></i>பள்ளிகள்<br /><i class="icon-location"></i>Schools</a></li>
+                                <li class=""><a href="partials/contacts.html"><i class="icon-mail"></i>தொடர்பு கொள்ள<br /><i class="icon-mail"></i>Contact Us</a></li>
+                                <li class=""><a href="partials/resources.html"><i class="icon-link"></i>வெளி இணைப்புகள்<br /><i class="icon-link"></i>External Links</a></li>
+                                <li class=""><a href="partials/BarathidasanCourses.html"><i class="icon-cabinet"></i>பாரதிதாசன் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Bharathidasan University</a></li>
+                                <li class=""><a href="partials/berkuniv.html"><i class="icon-cabinet"></i>பெர்க்லி பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Berkeley University</a></li>
+                                <li class=""><a href="partials/tuv.html"><i class="icon-cabinet"></i>தமிழிணையப் பல்கலைக்கழகம்<br /><i class="icon-cabinet"></i>Tamil Virtual University</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -66,8 +66,8 @@
             var pageLoader = (function () {
 
                 function transition(page, elem) {
-                    $(elem).closest('ul').find('.active').removeClass('active');
-                    $(elem).closest('li').addClass('active');
+                    $(elem).closest('ul').find('.active').removeClass('stick active');
+                    $(elem).closest('li').addClass('stick active');
                     return loadPage(page);
                 }
                 function loadPage(page) {

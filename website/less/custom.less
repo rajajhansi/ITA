@@ -1,10 +1,13 @@
-﻿.sidebar {
+﻿// Core variables
+@import "variables.less";
+
+.sidebar {
 
 
     & > ul {
 
         li {
-
+            border-left: 1px solid @grayLighter;            
 
             a {
                 padding: 10px 35px 10px 45px;
@@ -23,19 +26,18 @@
                 &:before {
                     width: 3px;
                     height: auto;
-                    top: 0px;
-                    bottom: 0px;
+                    top: 1px;
+                    bottom: 1px;
                     z-index: 9999;
                     left: 0px;
                     text-indent: -9999px;
                     border-top-left-radius: 0px;
                     border-bottom-left-radius: 0px;
-                    background-color: #2e92cf;
                 }
 
                 &.active {
                     &:before {
-                        background-color: white;
+                        background-color: @darkOrange;
                     }
                 }
             }
