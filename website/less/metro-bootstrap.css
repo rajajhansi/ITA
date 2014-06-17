@@ -5696,6 +5696,7 @@ a {
   padding-left: 0;
   list-style: none;
   margin: 0  !important;
+  margin: 0 !important;
   z-index: 2;
 }
 .metro .tab-control .tabs li ul,
@@ -10525,8 +10526,23 @@ a {
   background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
-.metro .sidebar > ul li {
-  border-left: 1px solid #eeeeee;
+.metro .sidebar > ul li a,
+.metro .sidebar > ul li a i {
+  webkit-transition: left 0.2s ease, padding-left 0.2s ease;
+  -moz-transition: left 0.2s ease, padding-left 0.2s ease;
+  -ms-transition: left 0.2s ease, padding-left 0.2s ease;
+  -o-transition: left 0.2s ease, padding-left 0.2s ease;
+  transition: left 0.2s ease, padding-left 0.2s ease;
+}
+.metro .sidebar > ul li:after {
+  webkit-transition: right 0.2s ease;
+  -moz-transition: right 0.2s ease;
+  -ms-transition: right 0.2s ease;
+  -o-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+}
+.metro .sidebar > ul li:after {
+  right: 0px;
 }
 .metro .sidebar > ul li a {
   padding: 10px 35px 10px 45px;
@@ -10552,9 +10568,27 @@ a {
   border-bottom-left-radius: 0px;
 }
 .metro .sidebar > ul li.stick.active:before {
-  background-color: #bf5a15;
+  background-color: #00aff0;
+}
+.metro .sidebar > ul li.active a {
+  padding-left: 60px;
+}
+.metro .sidebar > ul li.active a i {
+  left: 17px;
+}
+.metro .sidebar.light li.active a {
+  background-color: #ffffff;
+  color: #00aff0;
 }
 .metro .bg-ctablue {
   background-color: #000033;
+}
+.metro .no-margin {
+  margin: 0 !important;
+}
+@media screen and (max-width: 894px) {
+  .metro #main_container {
+    width: 894px;
+  }
 }
 /*# sourceMappingURL=metro-bootstrap.css.map */

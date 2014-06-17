@@ -58,6 +58,7 @@
                     <div id="content" class="span8">
                        
                     </div>
+
                 </div>
             </div>
         </div>
@@ -68,7 +69,7 @@
                 function transition(page, elem) {
                     $(elem).closest('ul').find('.active').removeClass('stick active');
                     $(elem).closest('li').addClass('stick active');
-                    return loadPage(page);
+                    return false;
                 }
                 function loadPage(page) {
                     $.get(page, { "_": $.now() }, function (data) {
@@ -122,8 +123,33 @@
                 }
                 pageLoader.LoadPage('partials/home.html');
 
-                $(document).on('click', 'li > a, a.inplace', function() {
+                $(document).on('click', 'li > a, a.inplace', function () {
+                    var self = this;
                     pageLoader.Transition($(this).attr('href'), this);
+                    $('#content').load($(this).attr('href'), function(response, status, xhr) {                       
+                        if (status == "error") {
+                            console.log('invalid url');
+                        }
+                        if ($(self).data('img')) {
+                            $('#dynImg').attr('src', 'images/pic/' + $(self).data('img'));
+                        }
+                    });
+                    //pageLoader.Transition($(this).attr('href'), this);
+                    return false;
+                });
+
+                $(document).on('click', 'li > a, a.iframe', function () {
+                    var self = this;
+                    pageLoader.Transition($(this).attr('href'), this);                   
+                    $('#content').load($(this).attr('href'), function (response, status, xhr) {
+                        if (status == "error") {
+                            console.log('invalid url');
+                        }
+                        if ($(self).data('img')) {
+                            $('#pdf').attr('src', 'docs/aboutus/' + $(self).data('img'));
+                        }
+                    });
+                    //pageLoader.Transition($(this).attr('href'), this);
                     return false;
                 });
 
