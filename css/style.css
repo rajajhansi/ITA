@@ -1,5 +1,5 @@
 ﻿.nav_up{
-	padding:8px;
+	padding:9px;
 	background-color: #FFFFFF;
     /* For WebKit (Safari, Chrome, etc) */
     background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
@@ -23,7 +23,7 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 }
 .nav_down{
-	padding:8px;
+	padding:9px;
 	background-color: #FFFFFF;
     /* For WebKit (Safari, Chrome, etc) */
     background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
