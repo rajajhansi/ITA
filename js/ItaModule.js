@@ -64,9 +64,40 @@ $(function () {
     } else {
         $("<script/>").attr('src', 'js/metro.min.js').appendTo($('head'));
     }
-    pageLoader.LoadPage('partials/home.html');    
+    pageLoader.LoadPage('partials/home.html');
 
-    $(document).on('click', 'li > a, a.inplace', function () {
+    var $elem = $('#content');
+    var $navup = $('#nav_up');
+    $navup.css({ position: 'fixed', left: '50%', 'margin-left': 0 - ($navup.width() / 2) });
+    $navup.fadeIn('slow');
+    var $navdown = $('#nav_down');
+    $navdown.css({ position: 'fixed', left: '50%', 'margin-left': 0 - ($navdown.width() / 2) + $navup.width() * 2 });
+    $navdown.fadeIn('slow');
+
+    $(window).bind('scrollstart', function () {
+        $('#nav_up,#nav_down').stop().animate({ 'opacity': '0.2' });
+    });
+    $(window).bind('scrollstop', function () {
+        $('#nav_up,#nav_down').stop().animate({ 'opacity': '1' });
+    });
+
+    $('#nav_down').click(
+        function (e) {
+            $('html, body').animate({ scrollTop: $elem.height() }, 800);
+        }
+    );
+    $('#nav_up').click(
+        function (e) {
+            $('html, body').animate({ scrollTop: '0px' }, 800);
+        }
+    );
+
+    $(document).on('click', 'a.scroll', function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+        return false;
+    });
+    $(document).on('click', 'li > a.inplace', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
         $('#content').load($(this).attr('href'), function (response, status, xhr) {
@@ -81,7 +112,7 @@ $(function () {
         return false;
     });
 
-    $(document).on('click', 'li > a, a.iframe', function () {
+    $(document).on('click', 'li > a.iframe', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
         $('#content').load($(this).attr('href'), function (response, status, xhr) {

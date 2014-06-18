@@ -1,0 +1,58 @@
+﻿.nav_up{
+	padding:8px;
+	background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #73ADC0, #FFFFFF) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#FFFFFF) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#73ADC0)" no-repeat;
+	border:1px solid #CCC;
+	border-radius:50%;
+	position:fixed;
+	background-position:50% 50%;
+	width:40px;
+	height:40px;
+	bottom:10px;
+	opacity:0.7;
+	left:30px;
+	white-space:nowrap;
+	cursor: pointer;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.nav_down{
+	padding:8px;
+	background-color: #FFFFFF;
+    /* For WebKit (Safari, Chrome, etc) */
+    background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
+    /* Mozilla,Firefox/Gecko */
+    background: #FFFFFF -moz-linear-gradient(top, #73ADC0, #FFFFFF) no-repeat;
+    /* IE 5.5 - 7 */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#FFFFFF) no-repeat;
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#73ADC0)" no-repeat;
+	border:1px solid #CCC;
+	border-radius:50%;
+	position:fixed;
+	background-position:50% 50%;
+	width:40px;
+	height:40px;
+	bottom:10px;
+	opacity:0.7;
+	left:70px;
+	white-space:nowrap;
+	cursor: pointer;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.nav_up > i {
+    font-size: 20px;
+    color: #0094ff;
+}
+
+.nav_down > i {
+    font-size: 20px;
+    color:  #0094ff;
+}
