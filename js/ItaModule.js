@@ -97,7 +97,7 @@ $(function () {
         $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 500);
         return false;
     });
-    $(document).on('click', 'li > a.inplace', function () {
+    $(document).on('click', 'li > a.inplace, a.inplace', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
         $('#content').load($(this).attr('href'), function (response, status, xhr) {
@@ -112,7 +112,7 @@ $(function () {
         return false;
     });
 
-    $(document).on('click', 'li > a.iframe', function () {
+    $(document).on('click', 'li > a.iframe, a.iframe', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
         $('#content').load($(this).attr('href'), function (response, status, xhr) {
