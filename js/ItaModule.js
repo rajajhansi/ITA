@@ -7,12 +7,20 @@ var pageLoader = (function () {
         return false;
     }
     function loadPage(page) {
-        $.get(page, { "_": $.now() }, function (data) {
-            $('#content').html(data);
+        $('#content').load(page, function(response, status, xhr) {
+                if (status == "error") {
+                    console.log('invalid url');
+                }
         });
+        scrollTop();
+        //$.get(page, { "_": $.now() }, function (data) {
+        //    $('#content').html(data);
+        //});
         return false;
     }
-
+    function scrollTop() {
+        $('html, body').animate({ scrollTop: '0px' }, "fast");        
+    }
     function getHtml(page) {
         var content = '';
         $.get(page, function (data) {
@@ -45,6 +53,7 @@ var pageLoader = (function () {
     return {
         Transition: transition,
         LoadPage: loadPage,
+        ScrollTop: scrollTop,
         LoadPageInAWindow: loadPageInAWindow
     };
 })();
@@ -55,7 +64,7 @@ $(function () {
     } else {
         $("<script/>").attr('src', 'js/metro.min.js').appendTo($('head'));
     }
-    pageLoader.LoadPage('partials/home.html');
+    pageLoader.LoadPage('partials/home.html');    
 
     $(document).on('click', 'li > a, a.inplace', function () {
         var self = this;
@@ -68,7 +77,7 @@ $(function () {
                 $('#dynImg').attr('src', 'images/pic/' + $(self).data('img'));
             }
         });
-        //pageLoader.Transition($(this).attr('href'), this);
+        pageLoader.ScrollTop();
         return false;
     });
 
@@ -83,7 +92,7 @@ $(function () {
                 $('#pdf').attr('src', 'docs/aboutus/' + $(self).data('img'));
             }
         });
-        //pageLoader.Transition($(this).attr('href'), this);
+        pageLoader.ScrollTop();
         return false;
     });
 
