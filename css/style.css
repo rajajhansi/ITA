@@ -56,3 +56,11 @@
     font-size: 20px;
     color:  #0094ff;
 }
+
+tr:nth-child(even) {
+    background-color: #ACBFDF;
+}
+td {
+white-space: nowrap;
+padding: 1px 0px 0px 5px;
+}
