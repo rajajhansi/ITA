@@ -63,9 +63,12 @@ th {
     text-align: left;
 }
 tr:nth-child(even) {
-    background-color: #ACBFDF;
+    background-color: #C8DBF0
 }
 
+tr:nth-child(odd) {
+    background-color:  #ACBFDF
+}
 tr.notatable:nth-child(odd) {
     background-color:  #ACBFDF
 }
