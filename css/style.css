@@ -142,6 +142,19 @@ td {
         margin-top: 74px;
     }
 }
+@media screen and (min-width: 1171px) and (max-width: 1920px) {
+    .site-headbar-cta-text {
+        margin-left: 300px;
+    }
+
+    .site-headbar-kids {
+        margin-right: 55px;
+    }
+
+    .site-headbar-login {        
+        margin-top: 74px;
+    }
+}
 /* the media query within our project, copy just the first selector */
 @media screen and (max-width: 894px) {
     /* no need to copy the one below */
