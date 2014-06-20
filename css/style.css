@@ -88,34 +88,46 @@ td {
 .site-headbar {
     height: 96px;
     background: url('/images/layout1_02.gif') repeat-x;
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
 }
 
+.site-headbar > div {
+    display: inline-block;
+    display: -moz-inline-stack;
+    vertical-align: top;
+    *display: inline;
+    _height: 96px;
+}
 .site-headbar-logo {
     width: 96px;
     height: 96px;
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: url('/images/tha_logo.gif') no-repeat;
 }
 
 .site-headbar-cta-text {
     width: 416px;
     height: 96px;
-    float: left;
+    margin-left: 20px;
     background: url('/images/text.gif') no-repeat;
 }
 
 .site-headbar-kids {
     width: 301px;
     height: 96px;
-    margin-right: -9px;
-    float: right;
     background: url('/images/ctaq_4_03.gif') no-repeat;
 }
 
 .site-headbar-small-logo {
     width: 75px;
     height: 96px;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
     background: url('/images/logo.gif') no-repeat;
 }
 
@@ -125,8 +137,9 @@ td {
 }
 
 .site-headbar-login {
-    float: right;
-    margin-top: 74px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
 }
 
 @media screen and (min-width: 1170px) {
@@ -142,7 +155,7 @@ td {
         margin-top: 74px;
     }
 }
-@media screen and (min-width: 1171px) and (max-width: 1920px) {
+/*@media screen and (min-width: 1171px) and (max-width: 1920px) {
     .site-headbar-cta-text {
         margin-left: 300px;
     }
@@ -154,7 +167,7 @@ td {
     .site-headbar-login {        
         margin-top: 74px;
     }
-}
+}*/
 /* the media query within our project, copy just the first selector */
 @media screen and (max-width: 894px) {
     /* no need to copy the one below */
