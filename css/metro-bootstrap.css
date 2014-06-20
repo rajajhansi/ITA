@@ -10580,6 +10580,9 @@ a {
   background-color: #ffffff;
   color: #00aff0;
 }
+.metro .grid .row {
+  margin-top: 1px;
+}
 .metro .bg-ctablue {
   background-color: #000033;
 }
@@ -10591,16 +10594,22 @@ a {
     width: 894px;
   }
 }
-.metro .style1 {
-  width: 8px;
+.metro p {
+  text-align: justify;
+  line-height: 6mm;
+  /* font-style: normal; */
+  letter-spacing: normal;
+  word-spacing: normal;
 }
-.metro .style2 {
-  font-weight: bold;
+.metro .tamil {
+  font-size: 10pt;
+  text-align: justify;
+  line-height: 6mm;
+  /* font-style: normal; */
+  letter-spacing: normal;
+  word-spacing: normal;
 }
-.metro .style4 {
-  width: 6px;
-}
-.metro .style8 {
-  height: 19px;
+.metro blockquote {
+  border-left: none;
 }
 /*# sourceMappingURL=metro-bootstrap.css.map */

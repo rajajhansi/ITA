@@ -7,15 +7,24 @@ var pageLoader = (function () {
         return false;
     }
     function loadPage(page) {
-        $('#content').load(page, function(response, status, xhr) {
+        $('#content').load(page + "?_=" + $.now(), function(response, status, xhr) {
                 if (status == "error") {
                     console.log('invalid url');
                 }
         });
-        scrollTop();
-        //$.get(page, { "_": $.now() }, function (data) {
-        //    $('#content').html(data);
-        //});
+        scrollTop();       
+        return false;
+    }
+    function loadPageWithImageOrDoc(page, loadElement, loadTargetElementId, path) {
+        $('#content').load(page + "?_=" + $.now(), function (response, status, xhr) {
+            if (status == "error") {
+                console.log('invalid url');
+            }
+            if ($(loadElement).data('img')) {
+                $(loadTargetElementId).attr('src', path + $(loadElement).data('img'));
+            }
+        });
+        scrollTop();       
         return false;
     }
     function scrollTop() {
@@ -53,6 +62,7 @@ var pageLoader = (function () {
     return {
         Transition: transition,
         LoadPage: loadPage,
+        LoadPageWithImageOrDoc: loadPageWithImageOrDoc,
         ScrollTop: scrollTop,
         LoadPageInAWindow: loadPageInAWindow
     };
@@ -100,36 +110,15 @@ $(function () {
     $(document).on('click', 'li > a.inplace, a.inplace', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
-        $('#content').load($(this).attr('href'), function (response, status, xhr) {
-            if (status == "error") {
-                console.log('invalid url');
-            }
-            if ($(self).data('img')) {
-                $('#dynImg').attr('src', 'images/pic/' + $(self).data('img'));
-            }
-        });
-        pageLoader.ScrollTop();
+        pageLoader.LoadPageWithImageOrDoc($(this).attr('href'), this, '#dynImg', 'images/pic/');      
         return false;
     });
 
     $(document).on('click', 'li > a.iframe, a.iframe', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
-        $('#content').load($(this).attr('href'), function (response, status, xhr) {
-            if (status == "error") {
-                console.log('invalid url');
-            }
-            if ($(self).data('img')) {
-                $('#pdf').attr('src', 'docs/aboutus/' + $(self).data('img'));
-            }
-        });
-        pageLoader.ScrollTop();
+        pageLoader.LoadPageWithImageOrDoc($(this).attr('href'), this, '#pdf', 'docs/aboutus/');
+ 
         return false;
     });
-
-    //$("li > a").click(function(event) {
-    //    pageLoader.Transition($(this).attr('href'), this);
-    //    return false;
-    //});
-
 });

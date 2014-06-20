@@ -52,6 +52,9 @@
   background-color: #ffffff;
   color: #00aff0;
 }
+.grid .row {
+  margin-top: 1px;
+}
 .bg-ctablue {
   background-color: #000033;
 }
@@ -62,5 +65,23 @@
   #main_container {
     width: 894px;
   }
+}
+p {
+  text-align: justify;
+  line-height: 6mm;
+  /* font-style: normal; */
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+.tamil {
+  font-size: 10pt;
+  text-align: justify;
+  line-height: 6mm;
+  /* font-style: normal; */
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+blockquote {
+  border-left: none;
 }
 /*# sourceMappingURL=custom.css.map */
