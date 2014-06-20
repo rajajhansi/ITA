@@ -25,6 +25,9 @@
   left: 10px;
   font-size: 30px;
 }
+.sidebar > ul li a:hover {
+  background-color: #0050ef;
+}
 .sidebar > ul li.stick {
   position: relative;
 }
@@ -40,7 +43,7 @@
   border-bottom-left-radius: 0px;
 }
 .sidebar > ul li.stick.active:before {
-  background-color: #00aff0;
+  background-color: #0050ef;
 }
 .sidebar > ul li.active a {
   padding-left: 60px;
@@ -48,9 +51,12 @@
 .sidebar > ul li.active a i {
   left: 17px;
 }
+.sidebar.light li a:hover {
+  background-color: #0050ef;
+}
 .sidebar.light li.active a {
   background-color: #ffffff;
-  color: #00aff0;
+  color: #0050ef;
 }
 .grid .row {
   margin-top: 1px;
@@ -65,6 +71,9 @@
   #main_container {
     width: 894px;
   }
+}
+a {
+  color: #0050ef;
 }
 p {
   text-align: justify;

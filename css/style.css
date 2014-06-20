@@ -1,6 +1,6 @@
-﻿.nav_up{
-	padding:9px;
-	background-color: #FFFFFF;
+﻿.nav_up {
+    padding: 9px;
+    background-color: #FFFFFF;
     /* For WebKit (Safari, Chrome, etc) */
     background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
     /* Mozilla,Firefox/Gecko */
@@ -9,22 +9,23 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#FFFFFF) no-repeat;
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#73ADC0)" no-repeat;
-	border:1px solid #CCC;
-	border-radius:50%;
-	position:fixed;
-	background-position:50% 50%;
-	width:40px;
-	height:40px;
-	bottom:10px;
-	opacity:0.7;
-	left:30px;
-	white-space:nowrap;
-	cursor: pointer;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    position: fixed;
+    background-position: 50% 50%;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    opacity: 0.7;
+    left: 30px;
+    white-space: nowrap;
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 }
-.nav_down{
-	padding:9px;
-	background-color: #FFFFFF;
+
+.nav_down {
+    padding: 9px;
+    background-color: #FFFFFF;
     /* For WebKit (Safari, Chrome, etc) */
     background: #FFFFFF -webkit-gradient(linear, left top, left bottom, from(#73ADC0), to(#FFFFFF)) no-repeat;
     /* Mozilla,Firefox/Gecko */
@@ -33,18 +34,18 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#FFFFFF) no-repeat;
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#73ADC0, endColorstr=#73ADC0)" no-repeat;
-	border:1px solid #CCC;
-	border-radius:50%;
-	position:fixed;
-	background-position:50% 50%;
-	width:40px;
-	height:40px;
-	bottom:10px;
-	opacity:0.7;
-	left:70px;
-	white-space:nowrap;
-	cursor: pointer;
-	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    border: 1px solid #CCC;
+    border-radius: 50%;
+    position: fixed;
+    background-position: 50% 50%;
+    width: 40px;
+    height: 40px;
+    bottom: 10px;
+    opacity: 0.7;
+    left: 70px;
+    white-space: nowrap;
+    cursor: pointer;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 }
 
 .nav_up > i {
@@ -54,7 +55,7 @@
 
 .nav_down > i {
     font-size: 20px;
-    color:  #0094ff;
+    color: #0094ff;
 }
 
 th {
@@ -62,70 +63,83 @@ th {
     color: white;
     text-align: left;
 }
+
 tr:nth-child(even) {
-    background-color: #C8DBF0
+    background-color: #C8DBF0;
 }
 
 tr:nth-child(odd) {
-    background-color:  #ACBFDF
+    background-color: #ACBFDF;
 }
+
 tr.notatable:nth-child(odd) {
-    background-color:  #ACBFDF
+    background-color: #ACBFDF;
 }
 
 tr.notatable:nth-child(even) {
-    background-color: #C8DBF0
+    background-color: #C8DBF0;
 }
 
 td {
-white-space: nowrap;
-padding: 1px 0px 0px 5px;
+    white-space: nowrap;
+    padding: 1px 0px 0px 5px;
 }
 
-.site-headbar{
-    height: 96px;    
+.site-headbar {
+    height: 96px;
     background: url('/images/layout1_02.gif') repeat-x;
 }
-.site-headbar-logo{
+
+.site-headbar-logo {
     width: 96px;
     height: 96px;
     float: left;
     background: url('/images/tha_logo.gif') no-repeat;
 }
-.site-headbar-cta-text{
+
+.site-headbar-cta-text {
     width: 416px;
     height: 96px;
     float: left;
     background: url('/images/text.gif') no-repeat;
 }
-.site-headbar-kids{
+
+.site-headbar-kids {
     width: 301px;
     height: 96px;
     margin-right: -9px;
     float: right;
     background: url('/images/ctaq_4_03.gif') no-repeat;
 }
-.site-headbar-small-logo{
+
+.site-headbar-small-logo {
     width: 75px;
     height: 96px;
     float: right;
     background: url('/images/logo.gif') no-repeat;
 }
-.nice-transition{
-    -webkit-transition: all 0.3s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+
+.nice-transition {
+    -webkit-transition: all 0.3s ease-out; /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.3s ease-out; /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
 }
+
 .site-headbar-login {
-    width: 30%;
     float: right;
-    margin-top: -23px;
+    margin-top: 74px;
 }
-@media screen and (min-width: 1170px){
-    .site-headbar-cta-text{
+
+@media screen and (min-width: 1170px) {
+    .site-headbar-cta-text {
         margin-left: 275px;
     }
-    .site-headbar-kids{
+
+    .site-headbar-kids {
         margin-right: 55px;
+    }
+
+    .site-headbar-login {        
+        margin-top: 74px;
     }
 }
 /* the media query within our project, copy just the first selector */

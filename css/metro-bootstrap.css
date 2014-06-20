@@ -10553,6 +10553,9 @@ a {
   left: 10px;
   font-size: 30px;
 }
+.metro .sidebar > ul li a:hover {
+  background-color: #0050ef;
+}
 .metro .sidebar > ul li.stick {
   position: relative;
 }
@@ -10568,7 +10571,7 @@ a {
   border-bottom-left-radius: 0px;
 }
 .metro .sidebar > ul li.stick.active:before {
-  background-color: #00aff0;
+  background-color: #0050ef;
 }
 .metro .sidebar > ul li.active a {
   padding-left: 60px;
@@ -10576,9 +10579,12 @@ a {
 .metro .sidebar > ul li.active a i {
   left: 17px;
 }
+.metro .sidebar.light li a:hover {
+  background-color: #0050ef;
+}
 .metro .sidebar.light li.active a {
   background-color: #ffffff;
-  color: #00aff0;
+  color: #0050ef;
 }
 .metro .grid .row {
   margin-top: 1px;
@@ -10593,6 +10599,9 @@ a {
   .metro #main_container {
     width: 894px;
   }
+}
+.metro a {
+  color: #0050ef;
 }
 .metro p {
   text-align: justify;
