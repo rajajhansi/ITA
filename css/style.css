@@ -61,8 +61,8 @@
 th {
     background-color: #243A69;
     color: white;
-    text-align: left;
     padding: 1px 0px 0px 5px;
+    text-align: left;
 }
 
 tr:nth-child(even) {
@@ -73,14 +73,19 @@ tr:nth-child(odd) {
     background-color: #ACBFDF;
 }
 
-tr.notatable:nth-child(odd) {
+tr.notatable:nth-child(odd)  tr.calendar1:nth-child(odd) {
     background-color: #ACBFDF;
 }
 
-tr.notatable:nth-child(even) {
+tr.notatable:nth-child(even) tr.calendar1:nth-child(even){
     background-color: #C8DBF0;
 }
 
+tr.calendar1 > td {
+    white-space: nowrap;
+    padding: 1px 0px 0px 5px;
+    text-align: center;
+}
 td {
     white-space: nowrap;
     padding: 1px 0px 0px 5px;
