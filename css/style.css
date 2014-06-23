@@ -62,6 +62,7 @@ th {
     background-color: #243A69;
     color: white;
     text-align: left;
+    padding: 1px 0px 0px 5px;
 }
 
 tr:nth-child(even) {
