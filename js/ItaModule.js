@@ -7,12 +7,14 @@ var pageLoader = (function () {
         return false;
     }
     function loadPage(page) {
-        $('#content').load(page + "?_=" + $.now(), function(response, status, xhr) {
-                if (status == "error") {
-                    console.log('invalid url');
-                }
+        $('#content').load(page + "?_=" + $.now(), function (response, status, xhr) {
+            if (status == "error") {
+                console.log('invalid url');
+            }
+            // Creates a new history entry.
+            window.history.pushState(null, null, page);
         });
-        scrollTop();       
+        scrollTop();
         return false;
     }
     function loadPageWithImageOrDoc(page, loadElement, loadTargetElementId, path) {
@@ -20,15 +22,17 @@ var pageLoader = (function () {
             if (status == "error") {
                 console.log('invalid url');
             }
+            // Creates a new history entry.
+            window.history.pushState(null, null, page);
             if ($(loadElement).data('img')) {
                 $(loadTargetElementId).attr('src', path + $(loadElement).data('img'));
             }
         });
-        scrollTop();       
+        scrollTop();
         return false;
     }
     function scrollTop() {
-        $('html, body').animate({ scrollTop: '0px' }, "fast");        
+        $('html, body').animate({ scrollTop: '0px' }, "fast");
     }
     function getHtml(page) {
         var content = '';
@@ -110,7 +114,9 @@ $(function () {
     $(document).on('click', 'li > a.inplace, a.inplace', function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
-        pageLoader.LoadPageWithImageOrDoc($(this).attr('href'), this, '#dynImg', 'images/pic/');      
+        // Creates a new history entry.
+        //window.history.pushState(null, null, $(this).attr('href'));
+        pageLoader.LoadPageWithImageOrDoc($(this).attr('href'), this, '#dynImg', 'images/pic/');
         return false;
     });
 
@@ -118,7 +124,7 @@ $(function () {
         var self = this;
         pageLoader.Transition($(this).attr('href'), this);
         pageLoader.LoadPageWithImageOrDoc($(this).attr('href'), this, '#pdf', 'docs/aboutus/');
- 
+
         return false;
     });
 });
