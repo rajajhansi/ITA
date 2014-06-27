@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" data-ng-app="mainApp">
+<head>
+    <title>உலகத் தமிழ்க் கழகம்/International Tamil Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="product" content="Metro UI CSS Framework">
+    <meta name="description" content="Simple responsive css framework">
+    <meta name="author" content="Sergey S. Pimenov, Ukraine, Kiev">
+
+    <link href="css/metro-bootstrap.css" rel="stylesheet">
+    <link href="css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/iconFont.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
+    <!-- Load JavaScript Libraries -->
+    <script src="js/jquery/jquery-2.1.1.js"></script>
+    <script src="scripts/jquery-ui-1.10.4.js"></script>   
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+
+</head>
+<body class="metro">
+    <div class="container-fluid" id="main_container">
+        <div class="grid fluid">
+            <div class="row no-margin">             
+                <div class="site-headbar">
+                    <div class="site-headbar-logo"></div>
+                    <div class="site-headbar-cta-text nice-transition"></div>
+                    <div class="site-headbar-small-logo"></div>
+                    <div class="site-headbar-kids nice-transition"></div>
+                    <div class="site-headbar-login"><a class="button mini primary" onclick="window.open('http://www.catamilacademy.org/cta');">Members Login</a></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span3">
+                    <nav class="sidebar light">
+                        <ul>
+                            <li class="active stick"><a class="inplace" href="#/"><i class="icon-home"></i><div class="tamil">முகப்பு</div><div>Home</div></a></li>
+                            <li class=""><a class="inplace" href="#/aboutus"><i class="icon-info"></i><div class="tamil">எங்களைப் பற்றி</div><div>About Us</div></a></li>
+                            <li class=""><a class="inplace" href="#/board"><i class="icon-user-3"></i><div class="tamil">நிர்வாகம்</div><i class="icon-user-3"></i>Board</a></li>
+                            <li class=""><a class="inplace" href="#/academics"><i class="icon-book"></i><div class="tamil">கல்வித்திட்டம்</div><i class="icon-book"></i>Academics</a></li>
+                            <li class=""><a class="inplace" href="#/registration"><i class="icon-pencil"></i><div class="tamil">பதிவு</div><i class="icon-pencil icon-file"></i>Registration</a></li>
+                            <li class=""><a class="inplace" href="#/schools"><i class="icon-location"></i><div class="tamil">பள்ளிகள்</div><i class="icon-location"></i>Schools</a></li>
+                            <li class=""><a class="inplace" href="#/contacts"><i class="icon-mail"></i><div class="tamil">தொடர்பு கொள்ள</div><i class="icon-mail"></i>Contact Us</a></li>
+                            <li class=""><a class="inplace" href="#/resources"><i class="icon-link"></i><div class="tamil">வெளி இணைப்புகள்</div><i class="icon-link"></i>External Links</a></li>
+                            <li class=""><a class="inplace" href="#/barathidasanCourses"><i class="icon-cabinet"></i><div class="tamil">பாரதிதாசன் பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Bharathidasan University</a></li>
+                            <li class=""><a class="inplace" href="#/berkuniv"><i class="icon-cabinet"></i><div class="tamil">பெர்க்லி பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Berkeley University</a></li>
+                            <li class=""><a class="inplace" href="#/tvu.html"><i class="icon-cabinet"></i><div class="tamil">தமிழிணையப் பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Tamil Virtual University</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="content" class="span8" data-ng-view="" data-ng-cloak="">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="display:none;" class="nav_up" id="nav_up"><i class="icon-arrow-up"></i></div>
+    <div style="display:none;" class="nav_down" id="nav_down"><i class="icon-arrow-down"></i></div>
+    
+    <script src="/js/mainApp.js"></script>
+    <script src="/js/HomeController.js"></script>
+    <script src="/js/SchoolsController.js"></script>
+    <script src="js/AboutUsController.js"></script>
+    <script src="js/scroll-startstop.events.jquery.js"></script>
+</body>
+
+</html>
