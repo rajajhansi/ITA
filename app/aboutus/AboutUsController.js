@@ -46,7 +46,7 @@
         var pageInfo = pages[$routeParams.page];
         vm.pageTitle = pageInfo.pageTitle;
         if (pageInfo.page) {
-            vm.page = '/templates/' + pageInfo.page + '.html';
+            vm.page = '/app/aboutus/' + pageInfo.page + '.html';
         }
         if (pageInfo.imgSrc) {
             vm.imgSrc = '/images/pic/' + pageInfo.imgSrc;
