@@ -1,17 +1,17 @@
-﻿<div class="span3">
+﻿<div class="span3" data-ng-controller="SideNavBarController as vm">
     <nav class="sidebar light">
         <ul>
-            <li class="active stick"><a class="inplace" href="#/"><i class="icon-home"></i><div class="tamil">முகப்பு</div><div>Home</div></a></li>
-            <li class=""><a class="inplace" href="#/aboutus"><i class="icon-info"></i><div class="tamil">எங்களைப் பற்றி</div><div>About Us</div></a></li>
-            <li class=""><a class="inplace" href="#/board"><i class="icon-user-3"></i><div class="tamil">நிர்வாகம்</div><i class="icon-user-3"></i>Board</a></li>
-            <li class=""><a class="inplace" href="#/academics"><i class="icon-book"></i><div class="tamil">கல்வித்திட்டம்</div><i class="icon-book"></i>Academics</a></li>
-            <li class=""><a class="inplace" href="#/registration"><i class="icon-pencil"></i><div class="tamil">பதிவு</div><i class="icon-pencil icon-file"></i>Registration</a></li>
-            <li class=""><a class="inplace" href="#/schools"><i class="icon-location"></i><div class="tamil">பள்ளிகள்</div><i class="icon-location"></i>Schools</a></li>
-            <li class=""><a class="inplace" href="#/contacts"><i class="icon-mail"></i><div class="tamil">தொடர்பு கொள்ள</div><i class="icon-mail"></i>Contact Us</a></li>
-            <li class=""><a class="inplace" href="#/resources"><i class="icon-link"></i><div class="tamil">வெளி இணைப்புகள்</div><i class="icon-link"></i>External Links</a></li>
-            <li class=""><a class="inplace" href="#/barathidasanCourses"><i class="icon-cabinet"></i><div class="tamil">பாரதிதாசன் பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Bharathidasan University</a></li>
-            <li class=""><a class="inplace" href="#/berkuniv"><i class="icon-cabinet"></i><div class="tamil">பெர்க்லி பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Berkeley University</a></li>
-            <li class=""><a class="inplace" href="#/tva"><i class="icon-cabinet"></i><div class="tamil">தமிழ் இணையக் கல்விக்கழகம்</div><i class="icon-cabinet"></i>Tamil Virtual Academy</a></li>
+            <li data-ng-class="vm.getClass('/')"><a class="inplace" href="#/"><i class="icon-home"></i><div class="tamil">முகப்பு</div><div>Home</div></a></li>
+            <li data-ng-class="vm.getClass('/aboutus')"><a class="inplace" href="#/aboutus"><i class="icon-info"></i><div class="tamil">எங்களைப் பற்றி</div><div>About Us</div></a></li>
+            <li data-ng-class="vm.getClass('/board')"><a class="inplace" href="#/board"><i class="icon-user-3"></i><div class="tamil">நிர்வாகம்</div><i class="icon-user-3"></i>Board</a></li>
+            <li data-ng-class="vm.getClass('/academics')"><a class="inplace" href="#/academics"><i class="icon-book"></i><div class="tamil">கல்வித்திட்டம்</div><i class="icon-book"></i>Academics</a></li>
+            <li data-ng-class="vm.getClass('/registration')"><a class="inplace" href="#/registration"><i class="icon-pencil"></i><div class="tamil">பதிவு</div><i class="icon-pencil icon-file"></i>Registration</a></li>
+            <li data-ng-class="vm.getClass('/schools')"><a class="inplace" href="#/schools"><i class="icon-location"></i><div class="tamil">பள்ளிகள்</div><i class="icon-location"></i>Schools</a></li>
+            <li data-ng-class="vm.getClass('/contacts')"><a class="inplace" href="#/contacts"><i class="icon-mail"></i><div class="tamil">தொடர்பு கொள்ள</div><i class="icon-mail"></i>Contact Us</a></li>
+            <li data-ng-class="vm.getClass('/resources')"><a class="inplace" href="#/resources"><i class="icon-link"></i><div class="tamil">வெளி இணைப்புகள்</div><i class="icon-link"></i>External Links</a></li>
+            <li data-ng-class="vm.getClass('/barathidasanCourses')"><a class="inplace" href="#/barathidasanCourses"><i class="icon-cabinet"></i><div class="tamil">பாரதிதாசன் பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Bharathidasan University</a></li>
+            <li data-ng-class="vm.getClass('/berkuniv')"><a class="inplace" href="#/berkuniv"><i class="icon-cabinet"></i><div class="tamil">பெர்க்லி பல்கலைக்கழகம்</div><i class="icon-cabinet"></i>Berkeley University</a></li>
+            <li data-ng-class="vm.getClass('/tva')"><a class="inplace" href="#/tva"><i class="icon-cabinet"></i><div class="tamil">தமிழ் இணையக் கல்விக்கழகம்</div><i class="icon-cabinet"></i>Tamil Virtual Academy</a></li>
         </ul>
     </nav>
 </div>

@@ -24,6 +24,7 @@
   top: 14px;
   left: 10px;
   font-size: 30px;
+  color: #000055;
 }
 .sidebar > ul li a:hover {
   background-color: #0050ef;
@@ -50,6 +51,7 @@
 }
 .sidebar > ul li.active a i {
   left: 17px;
+  color: #0050ef;
 }
 .sidebar.light li a:hover {
   background-color: #0050ef;
@@ -84,7 +86,6 @@ p {
 }
 .tamil {
   font-size: 10pt;
-  text-align: justify;
   line-height: 6mm;
   /* font-style: normal; */
   letter-spacing: normal;
